@@ -1,11 +1,7 @@
-## My Project
+## How to implement Authenticated S3 call in CloudFormation
 
-TODO: Fill this README out!
+Sample code used in AWS QuickStart Automation Blog
 
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description on GitHub
 
 ## License
 
