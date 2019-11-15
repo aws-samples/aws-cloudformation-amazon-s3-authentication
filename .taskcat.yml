@@ -1,0 +1,38 @@
+project:
+  name: cfn-authenticated-s3-example
+  owner: tonynv@amazon.com
+  package_lambda: false
+  regions:
+  - ap-northeast-1
+  - ap-northeast-2
+  - ap-south-1
+  - ap-southeast-1
+  - ap-southeast-2
+  - ca-central-1
+  - eu-central-1
+  - eu-west-2
+  - us-east-1
+  - us-east-2
+  - us-west-1
+  - us-west-2
+tests:
+  auth-example:
+    parameters:
+      AccessCIDR: 0.0.0.0/0
+      AvailabilityZones: $[taskcat_getaz_2]
+      BucketName: $[taskcat_autobucket]
+      KeyPairName: default
+    regions:
+    - ap-northeast-1
+    - ap-northeast-2
+    - ap-south-1
+    - ap-southeast-1
+    - ap-southeast-2
+    - ca-central-1
+    - eu-central-1
+    - eu-west-2
+    - us-east-1
+    - us-east-2
+    - us-west-1
+    - us-west-2
+    template: templates/authenticated-s3-in-vpc.template.yaml
